@@ -1,0 +1,46 @@
+name: build and test feature branch
+on:
+  pull_request:  ## evento que hace que dispare el worflow
+   types: [opened, reopened]
+   branches: [develop]  ###### rama que sera afectada
+   
+      
+jobs:
+  build-feature:
+    ##name: Build and Test  Nombre maquina 
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses:  actions/checkout@v3
+        with: 
+          ref: ${{github.event.pull_request.head.sha}}
+      - name: Pull and checkout from git repository
+        run:  echo "::** validando codigo fuentes desde de GitHub"   
+        
+        
+        
+            
+      
+      - name: Install up JDK ##Instalar java en la maquina virtual
+        uses: actions/setup-java@v3       
+        with:
+            distribution: 'temurin' # See 'Supported distributions' for available options
+            java-version: '17'
+     ## - run: java HelloWorldApp.java
+           
+          
+      - name: Guarda dependencias de cache de maven
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{runner.os}}-maven-
+          run: echo "::** cache guardado con EXITO "  
+        
+      - name: build with maven     
+        run:  
+            mvn clean install
+            echo "::** descargando descargado depencias"
+      
+     # - name: Run Unit Tests test unitarios
+      #  run: mvn test
