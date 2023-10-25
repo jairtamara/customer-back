@@ -12,9 +12,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout codigo
-      uses: actions/checkout@v3  
-
+    - name: Checkout codigo    
+      uses: actions/checkout@v3
+      with:
+         fetch-depth:0
     - name: Validar cambios
       id: check_changes
       
@@ -22,16 +23,9 @@ jobs:
               
 
       run: |  
-          cambios=$(git diff --name-only ${{github.event.before}} ${{ github.sha }})
-            if [ -n "$cambios" ]; then
-              echo "Se han detectado cambios en el repositorio."
-              echo "Cambios detectados: $cambios"
-              echo "::set-output name=changes::true"
-            else
-              echo "No se han detectado cambios en el repositorio."
-              echo "::set-output name=changes::false"
-
-            fi       
+          echo "${{ github.base_ref }} ${{ github.head_ref }} "
+          MODIFIED_FILES=$(git diff --name-only HEAD~ HEAD)
+          echo "Modified Archivos Folder: $MODIFIED_FILES"      
 
  
 
