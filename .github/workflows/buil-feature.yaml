@@ -1,4 +1,3 @@
-#pruebas con archivos .py
 name: Build and deploy
 
 on:
@@ -12,12 +11,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Install Python
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y python3
-      - name: Run script
-        uses: actions/run-python@v1
+      - name: Setup Python
+        uses: actions/setup-python@v2
         with:
-          script: |
-            python3 /github/workspace/tallerpython/repositorios/tallerpython.py
+          python-version: '3.x'
+      - name: Run script
+        run: |
+          python /github/workspace/tallerpython/repositorios/tallerpython.py
