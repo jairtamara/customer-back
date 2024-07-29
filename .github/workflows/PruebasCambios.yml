@@ -15,12 +15,13 @@ jobs:
     - name: Checkout codigo    
       uses: actions/checkout@v3      
     - name: Validar cambios
-      id: check_changes             
+      id: check_changes    
 
-      run: |  
-          echo "${{ github.base_ref }} ${{ github.head_ref }} "
-          MODIFIED_FILES=$(git diff --name-only HEAD~ HEAD)
-          echo "Modified Archivos Folder: $MODIFIED_FILES"    
-
+      run: |
+        echo "Base ref: ${{ github.base_ref }}"
+        echo "Head ref: ${{ github.head_ref }}"
+        MODIFIED_FILES=$(git diff --name-only ${{ github.base_ref }} ${{ github.head_ref }})
+        echo "Modified Files:"
+        echo "$MODIFIED_FILES"
 
         
