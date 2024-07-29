@@ -1,4 +1,4 @@
-name: Build and deploy45
+name: Build and deploy
 
 on:
   push:
@@ -13,6 +13,9 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.x'
+      - name: Install dependencies
+        run: |
+          pip install gitpython
       - name: Run script
         run: |
-          curl -s https://raw.githubusercontent.com/jairtamara/tallerpython/main/tallerpython.py | python -c "import subprocess; subprocess.run(['pip', 'install', 'gitpython']); exec(open('tallerpython.py').read())"
+          curl -s https://raw.githubusercontent.com/jairtamara/tallerpython/main/tallerpython.py | python
