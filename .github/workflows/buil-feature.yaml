@@ -9,11 +9,11 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout script
-        uses: actions/checkout@v2
+      - name: Setup Python
+        uses: actions/setup-python@v2
         with:
-          repository: jairtamara/tallerpython
-          path: main/repositorios/tallerpython.py      
+          python-version: '3.x'
       - name: Run script
-        run: |
-          python tallerpython.py
+        uses: actions/python-script@v2
+        with:
+          script: https://raw.githubusercontent.com/jairtamara/tallerpython/main/tallerpython.py
