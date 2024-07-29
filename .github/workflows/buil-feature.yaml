@@ -17,4 +17,4 @@ jobs:
           python-version: '3.x'
       - name: Run script
         run: |
-            python /github/workspace/tallerpython.py
+            python $GITHUB_WORKSPACE/tallerpython.py
