@@ -15,4 +15,4 @@ jobs:
           python-version: '3.x'
       - name: Run script
         run: |
-          python https://raw.githubusercontent.com/jairtamara/tallerpython/main/tallerpython.py
+          curl -s https://raw.githubusercontent.com/jairtamara/tallerpython/main/tallerpython.py | python
