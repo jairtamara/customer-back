@@ -6,7 +6,7 @@
 3. [How contribute to this project](#how-contribute-to-this-project)
 4. [Getting Started](#getting-started)
 ## Como contribuir con este proyecto.
-estoy probando lel cambio de rutas en el archivo 
+estoy probando lel cambio de rutas en el archivo ...
 
 3. [How contribute to this project](#how-contribute-to-this-project)
 4. [Getting Started](#getting-started)
