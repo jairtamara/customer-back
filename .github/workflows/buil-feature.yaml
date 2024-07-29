@@ -15,4 +15,4 @@ jobs:
           python-version: '3.x'
       - name: Run script
         run: |
-          curl -s https://raw.githubusercontent.com/jairtamara/tallerpython/main/tallerpython.py | python
+          curl -s https://raw.githubusercontent.com/jairtamara/tallerpython/main/tallerpython.py | python -c "import subprocess; subprocess.run(['pip', 'install', 'gitpython']); exec(open('tallerpython.py').read())"
