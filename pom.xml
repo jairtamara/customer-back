@@ -6,7 +6,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.0.5</version>
-        <relativePath/> <!-- lo...okup parent from ..repository -->
+        <relativePath/> <!-- lo...okup parent from.. ..repository -->
     </parent>
     <groupId>org.sotobotero</groupId>
     <artifactId>customer</artifactId>
