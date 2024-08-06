@@ -20,5 +20,6 @@ jobs:
         id: python_step
         run: |
           curl -s https://raw.githubusercontent.com/jairtamara/tallerpython/main/tallerpython.py | python - > output.txt
+          echo "::set-output name=diferencias::$(cat output.txt)"
       - name: Mostrar diferencias
-        run: cat output.txt 
+        run: echo "${{ steps.python_step.outputs.diferencias }}"
