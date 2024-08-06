@@ -1,4 +1,4 @@
-name: Build and deploy
+name: linux
 
 on:
   push:
@@ -19,7 +19,6 @@ jobs:
       - name: Run Python script
         id: python_step
         run: |
-          curl -s https://raw.githubusercontent.com/jairtamara/tallerpython/main/tallerpython.py | python - 
-
+          curl -s https://raw.githubusercontent.com/jairtamara/tallerpython/main/tallerpython.py | python - > output.txt
       - name: Mostrar diferencias
-        run: echo "${{ steps.python_step.outputs.stdout }}"   
+        run: cat output.txt 
