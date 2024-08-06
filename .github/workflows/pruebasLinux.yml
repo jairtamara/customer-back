@@ -19,6 +19,6 @@ jobs:
       - name: Run Python script
         id: python_step
         run: |
-          curl -s https://raw.githubusercontent.com/jairtamara/tallerpython/main/tallerpython1.py | python -            
+          curl -s https://github.com/jairtamara/tallerpython/blob/jairtamara-patch-1/tallerpython1.py | python -            
       - name: Mostrar diferencias
         run: echo "${{ steps.python_step.outputs.stdout }}"   
