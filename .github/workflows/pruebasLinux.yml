@@ -19,7 +19,6 @@ jobs:
       - name: Run Python script
         id: python_step
         run: |
-          curl -s https://raw.githubusercontent.com/jairtamara/tallerpython/main/tallerpython.py | python - > output.txt
-          echo "::set-output name=diferencias::$(cat output.txt)"
+          curl -s https://raw.githubusercontent.com/jairtamara/tallerpython/main/tallerpython1.py | python           
       - name: Mostrar diferencias
-        run: echo "${{ steps.python_step.outputs.diferencias }}"
+        run: echo "${{ steps.python_step.outputs.stdout }}"   
