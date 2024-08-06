@@ -4,7 +4,7 @@ name: Validación de cambios y despliegue
 
 on:
   push:
-    branches: [main]
+    branches: [test]
       
 
 jobs:
