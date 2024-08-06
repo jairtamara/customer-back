@@ -9,7 +9,7 @@ on:
 
 jobs:
   Valida-cambios-contra-repositorio-Anterior:
-    runs-on: ubuntu-latest
+    runs-on: 'win'
 
     steps:
     - name: Checkout codigo    
