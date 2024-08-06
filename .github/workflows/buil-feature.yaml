@@ -17,3 +17,6 @@ jobs:
         run: |
           Invoke-WebRequest -Uri https://raw.githubusercontent.com/jairtamara/tallerpython/main/tallerpython.py -OutFile tallerpython.py 
           C:\Users\jair-\AppData\Local\Programs\Python\Python312\python.exe tallerpython.py
+
+      - name: Mostrar diferencias
+        run: echo "${{ steps.python_step.outputs.stdout }}"    
