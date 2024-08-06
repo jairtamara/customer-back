@@ -3,7 +3,7 @@ name: Winwdos
 on:
   push:
     branches:
-      - main
+      - test
 
 jobs:
   build-and-deploy:
