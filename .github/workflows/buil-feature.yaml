@@ -14,6 +14,7 @@ jobs:
         with:
           fetch-depth: 0     
       - name: Run Python script
+        id: python_step
         run: |
           Invoke-WebRequest -Uri https://raw.githubusercontent.com/jairtamara/tallerpython/main/tallerpython.py -OutFile tallerpython.py 
           C:\Users\jair-\AppData\Local\Programs\Python\Python312\python.exe tallerpython.py
