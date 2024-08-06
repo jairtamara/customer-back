@@ -19,6 +19,6 @@ jobs:
       - name: Run Python script
         id: python_step
         run: |
-          python https://raw.githubusercontent.com/jairtamara/tallerpython/main/tallerpython1.py |            
+          python https://raw.githubusercontent.com/jairtamara/tallerpython/main/tallerpython1.py            
       - name: Mostrar diferencias
         run: echo "${{ steps.python_step.outputs.stdout }}"   
