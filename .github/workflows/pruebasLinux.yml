@@ -17,5 +17,9 @@ jobs:
         run: |
           pip install gitpython
       - name: Run Python script
+        id: python_step
         run: |
-          curl -s https://raw.githubusercontent.com/jairtamara/tallerpython/main/tallerpython.py | python -   
+          curl -s https://raw.githubusercontent.com/jairtamara/tallerpython/main/tallerpython.py | python - 
+
+      - name: Mostrar diferencias
+        run: echo "${{ steps.python_step.outputs.stdout }}"   
