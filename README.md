@@ -1,7 +1,6 @@
 # Spring boot CRUD By [Sotobotero](https://sotobotero.com)
 ..............................
-
-**Content** ............ .............................
+a.........................asdfasdf
 
 1. [Como contribuir con este proyecto](#como-contribuir-con-este-proyecto)
 2. [Como empezar a usar la aplicación](#como-empezar)
