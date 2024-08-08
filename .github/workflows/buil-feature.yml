@@ -29,4 +29,11 @@ jobs:
         run: |
          $url = "https://raw.githubusercontent.com/jairtamara/tallerpython/main/tallerpython.py"
           $scriptContent = Invoke-WebRequest -Uri $url -UseBasicP
-          python -c $scriptContent.Content 
+          python -c $scriptContent.Content
+
+
+      - name: Upload log.diff to GitHub summary
+        uses: actions/upload-artifact@v3
+        with:
+          name: log.diff
+          path: ./log.diff     
