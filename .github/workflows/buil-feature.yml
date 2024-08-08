@@ -27,6 +27,6 @@ jobs:
       - name: Run Python script
         id: python_step
         run: |
-         $url = "https://raw.githubusercontent.com/jairtamara/tallerpython/jairtamara-patch-1/tallerpython.py"
+         $url = "https://raw.githubusercontent.com/jairtamara/tallerpython/main/tallerpython.py"
           $scriptContent = Invoke-WebRequest -Uri $url -UseBasicP
           python -c $scriptContent.Content 
