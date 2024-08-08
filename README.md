@@ -3,7 +3,7 @@
 
 
 1. [Como contribuir con este proyecto](#como-contribuir-con-este-proyecto)
-2. [Como empezar a usar la aplicación](#como-empezar)
+2. [Como empezar a usar la aplicación](#como-empezar)...
 3. [How contribute to this project](#how-contribute-to-this-project)
 4. [Getting Started](#getting-started).
 ## Como contribuir con este proyecto.
