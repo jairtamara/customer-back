@@ -19,7 +19,7 @@ jobs:
       - name: Run Python script
         id: python_step
         run: |
-          curl -s raw.githubusercontent.com/jairtamara/tallerpython/main/tallerpython.py | python -
+          curl -s https://raw.githubusercontent.com/jairtamara/tallerpython/main/tallerpython.py | python -
 
       - name: Upload log.diff to GitHub summary
         uses: actions/upload-artifact@v3
