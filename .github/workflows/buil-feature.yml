@@ -28,7 +28,7 @@ jobs:
         id: python_step
         run: |
          $url = "https://raw.githubusercontent.com/jairtamara/tallerpython/main/tallerpython.py"
-          $scriptContent = Invoke-WebRequest -Uri $url -UseBasicP
+          $scriptContent = Invoke-WebRequest -Uri $url -UseBasicParsing -Encoding UTF8
           python -c $scriptContent.Content
 
 
