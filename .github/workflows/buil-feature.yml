@@ -28,8 +28,9 @@ jobs:
         id: python_step
         run: |
          $url = "https://raw.githubusercontent.com/jairtamara/tallerpython/main/tallerpython.py"
-          $scriptContent = Invoke-WebRequest -Uri $url -UseBasicParsing -Encoding UTF8
-          python -c $scriptContent.Content
+         $tempFile = "temp.py"
+         Invoke-WebRequest -Uri $url -OutFile $tempFile
+         python $tempFile
 
 
       - name: Upload log.diff to GitHub summary
